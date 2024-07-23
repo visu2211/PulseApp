@@ -1,24 +1,62 @@
-//
-//  ContentView.swift
-//  HealthHomeKitMediator
-//
-//  Created by Ben Nguyen on 7/15/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State private var temperature: Double?
+    @State private var errorMessage: String?
+    let healthKitManager = HealthKitManager()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Health Data Monitor")
+                .font(.largeTitle)
+                .padding()
+            if let temperature = temperature {
+                Text("Body Temperature: \(temperature, specifier: "%.2f")°C")
+                    .padding()
+            } else if let errorMessage = errorMessage {
+                Text(errorMessage)
+                    .padding()
+                    .foregroundColor(.red)
+            } else {
+                Text("Fetching temperature...")
+                    .padding()
+            }
+            Button(action: fetchTemperature) {
+                Text("Refresh")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
         }
-        .padding()
+        .onAppear(perform: requestAuthorization)
+    }
+
+    func requestAuthorization() {
+        healthKitManager.requestAuthorization { success, error in
+            if success {
+                fetchTemperature()
+            } else {
+                errorMessage = "HealthKit authorization failed: \(String(describing: error?.localizedDescription))"
+            }
+        }
+    }
+
+    func fetchTemperature() {
+        healthKitManager.readBodyTemperature { temperature, error in
+            if let temperature = temperature {
+                self.temperature = temperature
+                self.errorMessage = nil
+            } else {
+                self.temperature = nil
+                self.errorMessage = error
+            }
+        }
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

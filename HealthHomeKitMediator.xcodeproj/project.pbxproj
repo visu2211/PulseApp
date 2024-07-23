@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84040FDF2C4F0A7A00FA6D54 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84040FDE2C4F0A7A00FA6D54 /* HealthKitManager.swift */; };
 		843453052C46278800B36A23 /* HealthHomeKitMediatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843453042C46278800B36A23 /* HealthHomeKitMediatorApp.swift */; };
 		843453072C46278800B36A23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843453062C46278800B36A23 /* ContentView.swift */; };
 		843453092C46278A00B36A23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843453082C46278A00B36A23 /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84040FDE2C4F0A7A00FA6D54 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		84040FE02C4F0C2B00FA6D54 /* HealthHomeKitMediator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthHomeKitMediator.entitlements; sourceTree = "<group>"; };
 		843453012C46278800B36A23 /* HealthHomeKitMediator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthHomeKitMediator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843453042C46278800B36A23 /* HealthHomeKitMediatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHomeKitMediatorApp.swift; sourceTree = "<group>"; };
 		843453062C46278800B36A23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 		843453032C46278800B36A23 /* HealthHomeKitMediator */ = {
 			isa = PBXGroup;
 			children = (
+				84040FE02C4F0C2B00FA6D54 /* HealthHomeKitMediator.entitlements */,
+				84040FDE2C4F0A7A00FA6D54 /* HealthKitManager.swift */,
 				843453042C46278800B36A23 /* HealthHomeKitMediatorApp.swift */,
 				843453062C46278800B36A23 /* ContentView.swift */,
 				843453082C46278A00B36A23 /* Assets.xcassets */,
@@ -139,6 +144,7 @@
 			files = (
 				843453072C46278800B36A23 /* ContentView.swift in Sources */,
 				843453052C46278800B36A23 /* HealthHomeKitMediatorApp.swift in Sources */,
+				84040FDF2C4F0A7A00FA6D54 /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +275,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthHomeKitMediator/HealthHomeKitMediator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthHomeKitMediator/Preview Content\"";
-				DEVELOPMENT_TEAM = 44DS64R2QA;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your body temperature data is used to monitor and provide health insights.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,12 +307,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthHomeKitMediator/HealthHomeKitMediator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthHomeKitMediator/Preview Content\"";
-				DEVELOPMENT_TEAM = 44DS64R2QA;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your body temperature data is used to monitor and provide health insights.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
