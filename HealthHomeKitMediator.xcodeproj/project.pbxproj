@@ -11,6 +11,8 @@
 		843453072C46278800B36A23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843453062C46278800B36A23 /* ContentView.swift */; };
 		843453092C46278A00B36A23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843453082C46278A00B36A23 /* Assets.xcassets */; };
 		8434530C2C46278A00B36A23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8434530B2C46278A00B36A23 /* Preview Assets.xcassets */; };
+		AFFE56F82C5878D000B5F608 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE56F72C5878D000B5F608 /* HealthKitManager.swift */; };
+		AFFE56FB2C5932F700B5F608 /* HomeKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE56FA2C5932F700B5F608 /* HomeKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,10 @@
 		843453062C46278800B36A23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		843453082C46278A00B36A23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8434530B2C46278A00B36A23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF5DA2902C517B1700FA7E64 /* HealthHomeKitMediator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthHomeKitMediator.entitlements; sourceTree = "<group>"; };
+		AFFE56F72C5878D000B5F608 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		AFFE56F92C587BA300B5F608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AFFE56FA2C5932F700B5F608 /* HomeKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,10 @@
 		843453032C46278800B36A23 /* HealthHomeKitMediator */ = {
 			isa = PBXGroup;
 			children = (
+				AFFE56F92C587BA300B5F608 /* Info.plist */,
+				AF5DA2902C517B1700FA7E64 /* HealthHomeKitMediator.entitlements */,
+				AFFE56FA2C5932F700B5F608 /* HomeKitManager.swift */,
+				AFFE56F72C5878D000B5F608 /* HealthKitManager.swift */,
 				843453042C46278800B36A23 /* HealthHomeKitMediatorApp.swift */,
 				843453062C46278800B36A23 /* ContentView.swift */,
 				843453082C46278A00B36A23 /* Assets.xcassets */,
@@ -139,6 +149,8 @@
 			files = (
 				843453072C46278800B36A23 /* ContentView.swift in Sources */,
 				843453052C46278800B36A23 /* HealthHomeKitMediatorApp.swift in Sources */,
+				AFFE56F82C5878D000B5F608 /* HealthKitManager.swift in Sources */,
+				AFFE56FB2C5932F700B5F608 /* HomeKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +281,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthHomeKitMediator/HealthHomeKitMediator.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthHomeKitMediator/Preview Content\"";
-				DEVELOPMENT_TEAM = 44DS64R2QA;
+				DEVELOPMENT_TEAM = 5R429V8FQG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthHomeKitMediator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -285,8 +300,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PulseTech.HealthHomeKitMediator;
+				PRODUCT_BUNDLE_IDENTIFIER = PulseTech.HealthHomeKitMediatorAppAp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,12 +314,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthHomeKitMediator/HealthHomeKitMediator.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthHomeKitMediator/Preview Content\"";
-				DEVELOPMENT_TEAM = 44DS64R2QA;
+				DEVELOPMENT_TEAM = 5R429V8FQG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HealthHomeKitMediator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,8 +333,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PulseTech.HealthHomeKitMediator;
+				PRODUCT_BUNDLE_IDENTIFIER = PulseTech.HealthHomeKitMediatorAppAp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

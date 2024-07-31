@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//@main
+@main
 struct HealthHomeKitMediatorApp: App {
     var body: some Scene {
         WindowGroup {
