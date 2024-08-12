@@ -466,7 +466,7 @@
 			};
 			name = Release;
 		};
->>>>>>> Stashed changes
+
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
