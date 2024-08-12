@@ -1,5 +1,6 @@
 import HomeKit
 
+
 class HomeKitManager: NSObject, HMHomeManagerDelegate {
     private var homeManager: HMHomeManager?
 

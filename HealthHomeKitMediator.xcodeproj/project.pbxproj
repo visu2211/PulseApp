@@ -11,9 +11,57 @@
 		843453072C46278800B36A23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843453062C46278800B36A23 /* ContentView.swift */; };
 		843453092C46278A00B36A23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843453082C46278A00B36A23 /* Assets.xcassets */; };
 		8434530C2C46278A00B36A23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8434530B2C46278A00B36A23 /* Preview Assets.xcassets */; };
+		AF3709B62C672FD00016E886 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3709B52C672FD00016E886 /* WatchConnectivity.framework */; };
+		AF3709C22C6739130016E886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3709C12C6739130016E886 /* Assets.xcassets */; };
+		AF3709C52C6739130016E886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3709C42C6739130016E886 /* Preview Assets.xcassets */; };
+		AF3709CF2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3709CE2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppTests.swift */; };
+		AF3709D92C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3709D82C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITests.swift */; };
+		AF3709DB2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3709DA2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITestsLaunchTests.swift */; };
+		AF3709DE2C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AF3709BB2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF3709EB2C673EF00016E886 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3709E92C673EED0016E886 /* InterfaceController.swift */; };
+		AF3709EE2C673FAC0016E886 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3709EC2C673FA90016E886 /* ContentView.swift */; };
+		AF3709F12C673FCF0016E886 /* HealthHomeKitMediatorWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3709EF2C673FCC0016E886 /* HealthHomeKitMediatorWatchAppApp.swift */; };
 		AFFE56F82C5878D000B5F608 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE56F72C5878D000B5F608 /* HealthKitManager.swift */; };
 		AFFE56FB2C5932F700B5F608 /* HomeKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE56FA2C5932F700B5F608 /* HomeKitManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF3709CB2C6739140016E886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843452F92C46278700B36A23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF3709BA2C6739120016E886;
+			remoteInfo = "HealthHomeKitMediatorWatchApp Watch App";
+		};
+		AF3709D52C6739140016E886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843452F92C46278700B36A23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF3709BA2C6739120016E886;
+			remoteInfo = "HealthHomeKitMediatorWatchApp Watch App";
+		};
+		AF3709DC2C6739140016E886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843452F92C46278700B36A23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF3709BA2C6739120016E886;
+			remoteInfo = "HealthHomeKitMediatorWatchApp Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF3709E22C6739140016E886 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				AF3709DE2C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		843453012C46278800B36A23 /* HealthHomeKitMediator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthHomeKitMediator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,6 +69,18 @@
 		843453062C46278800B36A23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		843453082C46278A00B36A23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8434530B2C46278A00B36A23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF3709B52C672FD00016E886 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		AF3709BB2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HealthHomeKitMediatorWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3709C12C6739130016E886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF3709C42C6739130016E886 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF3709CA2C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HealthHomeKitMediatorWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3709CE2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHomeKitMediatorWatchApp_Watch_AppTests.swift; sourceTree = "<group>"; };
+		AF3709D42C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HealthHomeKitMediatorWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3709D82C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHomeKitMediatorWatchApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		AF3709DA2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHomeKitMediatorWatchApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF3709E92C673EED0016E886 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		AF3709EC2C673FA90016E886 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
+		AF3709EF2C673FCC0016E886 /* HealthHomeKitMediatorWatchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HealthHomeKitMediatorWatchAppApp.swift; path = ../HealthHomeKitMediatorWatchAppApp.swift; sourceTree = "<group>"; };
 		AF5DA2902C517B1700FA7E64 /* HealthHomeKitMediator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthHomeKitMediator.entitlements; sourceTree = "<group>"; };
 		AFFE56F72C5878D000B5F608 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		AFFE56F92C587BA300B5F608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +89,28 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		843452FE2C46278800B36A23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3709B62C672FD00016E886 /* WatchConnectivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3709B82C6739120016E886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3709C72C6739140016E886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3709D12C6739140016E886 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,7 +124,11 @@
 			isa = PBXGroup;
 			children = (
 				843453032C46278800B36A23 /* HealthHomeKitMediator */,
+				AF3709BC2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App */,
+				AF3709CD2C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppTests */,
+				AF3709D72C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppUITests */,
 				843453022C46278800B36A23 /* Products */,
+				AF3709B42C672FD00016E886 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				843453012C46278800B36A23 /* HealthHomeKitMediator.app */,
+				AF3709BB2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App.app */,
+				AF3709CA2C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppTests.xctest */,
+				AF3709D42C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +166,51 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AF3709B42C672FD00016E886 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF3709B52C672FD00016E886 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF3709BC2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				AF3709EF2C673FCC0016E886 /* HealthHomeKitMediatorWatchAppApp.swift */,
+				AF3709EC2C673FA90016E886 /* ContentView.swift */,
+				AF3709E92C673EED0016E886 /* InterfaceController.swift */,
+				AF3709C12C6739130016E886 /* Assets.xcassets */,
+				AF3709C32C6739130016E886 /* Preview Content */,
+			);
+			path = "HealthHomeKitMediatorWatchApp Watch App";
+			sourceTree = "<group>";
+		};
+		AF3709C32C6739130016E886 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF3709C42C6739130016E886 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF3709CD2C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF3709CE2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppTests.swift */,
+			);
+			path = "HealthHomeKitMediatorWatchApp Watch AppTests";
+			sourceTree = "<group>";
+		};
+		AF3709D72C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF3709D82C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITests.swift */,
+				AF3709DA2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "HealthHomeKitMediatorWatchApp Watch AppUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,15 +221,70 @@
 				843452FD2C46278800B36A23 /* Sources */,
 				843452FE2C46278800B36A23 /* Frameworks */,
 				843452FF2C46278800B36A23 /* Resources */,
+				AF3709E22C6739140016E886 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF3709DD2C6739140016E886 /* PBXTargetDependency */,
 			);
 			name = HealthHomeKitMediator;
 			productName = HealthHomeKitMediator;
 			productReference = 843453012C46278800B36A23 /* HealthHomeKitMediator.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AF3709BA2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF3709DF2C6739140016E886 /* Build configuration list for PBXNativeTarget "HealthHomeKitMediatorWatchApp Watch App" */;
+			buildPhases = (
+				AF3709B72C6739120016E886 /* Sources */,
+				AF3709B82C6739120016E886 /* Frameworks */,
+				AF3709B92C6739120016E886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HealthHomeKitMediatorWatchApp Watch App";
+			productName = "HealthHomeKitMediatorWatchApp Watch App";
+			productReference = AF3709BB2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF3709C92C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF3709E32C6739140016E886 /* Build configuration list for PBXNativeTarget "HealthHomeKitMediatorWatchApp Watch AppTests" */;
+			buildPhases = (
+				AF3709C62C6739140016E886 /* Sources */,
+				AF3709C72C6739140016E886 /* Frameworks */,
+				AF3709C82C6739140016E886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF3709CC2C6739140016E886 /* PBXTargetDependency */,
+			);
+			name = "HealthHomeKitMediatorWatchApp Watch AppTests";
+			productName = "HealthHomeKitMediatorWatchApp Watch AppTests";
+			productReference = AF3709CA2C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF3709D32C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF3709E62C6739140016E886 /* Build configuration list for PBXNativeTarget "HealthHomeKitMediatorWatchApp Watch AppUITests" */;
+			buildPhases = (
+				AF3709D02C6739140016E886 /* Sources */,
+				AF3709D12C6739140016E886 /* Frameworks */,
+				AF3709D22C6739140016E886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF3709D62C6739140016E886 /* PBXTargetDependency */,
+			);
+			name = "HealthHomeKitMediatorWatchApp Watch AppUITests";
+			productName = "HealthHomeKitMediatorWatchApp Watch AppUITests";
+			productReference = AF3709D42C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,6 +298,17 @@
 				TargetAttributes = {
 					843453002C46278800B36A23 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					AF3709BA2C6739120016E886 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					AF3709C92C6739140016E886 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = AF3709BA2C6739120016E886;
+					};
+					AF3709D32C6739140016E886 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = AF3709BA2C6739120016E886;
 					};
 				};
 			};
@@ -126,6 +326,9 @@
 			projectRoot = "";
 			targets = (
 				843453002C46278800B36A23 /* HealthHomeKitMediator */,
+				AF3709BA2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App */,
+				AF3709C92C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppTests */,
+				AF3709D32C6739140016E886 /* HealthHomeKitMediatorWatchApp Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +340,29 @@
 			files = (
 				8434530C2C46278A00B36A23 /* Preview Assets.xcassets in Resources */,
 				843453092C46278A00B36A23 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3709B92C6739120016E886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3709C52C6739130016E886 /* Preview Assets.xcassets in Resources */,
+				AF3709C22C6739130016E886 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3709C82C6739140016E886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3709D22C6739140016E886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +380,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF3709B72C6739120016E886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3709EE2C673FAC0016E886 /* ContentView.swift in Sources */,
+				AF3709F12C673FCF0016E886 /* HealthHomeKitMediatorWatchAppApp.swift in Sources */,
+				AF3709EB2C673EF00016E886 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3709C62C6739140016E886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3709CF2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3709D02C6739140016E886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3709D92C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITests.swift in Sources */,
+				AF3709DB2C6739140016E886 /* HealthHomeKitMediatorWatchApp_Watch_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF3709CC2C6739140016E886 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF3709BA2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App */;
+			targetProxy = AF3709CB2C6739140016E886 /* PBXContainerItemProxy */;
+		};
+		AF3709D62C6739140016E886 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF3709BA2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App */;
+			targetProxy = AF3709D52C6739140016E886 /* PBXContainerItemProxy */;
+		};
+		AF3709DD2C6739140016E886 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF3709BA2C6739120016E886 /* HealthHomeKitMediatorWatchApp Watch App */;
+			targetProxy = AF3709DC2C6739140016E886 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8434530D2C46278A00B36A23 /* Debug */ = {
@@ -279,6 +550,7 @@
 		843453102C46278A00B36A23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HealthHomeKitMediator/HealthHomeKitMediator.entitlements;
@@ -312,6 +584,7 @@
 		843453112C46278A00B36A23 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HealthHomeKitMediator/HealthHomeKitMediator.entitlements;
@@ -342,6 +615,150 @@
 			};
 			name = Release;
 		};
+		AF3709E02C6739140016E886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HealthHomeKitMediatorWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 5R429V8FQG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HealthHomeKitMediatorWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mycompany.myhealthapp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.myhealthapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		AF3709E12C6739140016E886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HealthHomeKitMediatorWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 5R429V8FQG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HealthHomeKitMediatorWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mycompany.myhealthapp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.myhealthapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		AF3709E42C6739140016E886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R429V8FQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "visu.HealthHomeKitMediatorWatchApp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthHomeKitMediatorWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthHomeKitMediatorWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		AF3709E52C6739140016E886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R429V8FQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "visu.HealthHomeKitMediatorWatchApp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthHomeKitMediatorWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthHomeKitMediatorWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		AF3709E72C6739140016E886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R429V8FQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "visu.HealthHomeKitMediatorWatchApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "HealthHomeKitMediatorWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		AF3709E82C6739140016E886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R429V8FQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "visu.HealthHomeKitMediatorWatchApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "HealthHomeKitMediatorWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +776,33 @@
 			buildConfigurations = (
 				843453102C46278A00B36A23 /* Debug */,
 				843453112C46278A00B36A23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF3709DF2C6739140016E886 /* Build configuration list for PBXNativeTarget "HealthHomeKitMediatorWatchApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF3709E02C6739140016E886 /* Debug */,
+				AF3709E12C6739140016E886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF3709E32C6739140016E886 /* Build configuration list for PBXNativeTarget "HealthHomeKitMediatorWatchApp Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF3709E42C6739140016E886 /* Debug */,
+				AF3709E52C6739140016E886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF3709E62C6739140016E886 /* Build configuration list for PBXNativeTarget "HealthHomeKitMediatorWatchApp Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF3709E72C6739140016E886 /* Debug */,
+				AF3709E82C6739140016E886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
