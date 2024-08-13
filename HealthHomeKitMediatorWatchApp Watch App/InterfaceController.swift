@@ -1,15 +1,8 @@
-//
-//  InterfaceController.swift
-//  HealthHomeKitMediator
-//
-//  Created by Vishal Kanala on 8/10/24.
-//
-
 import WatchKit
 import Foundation
 import WatchConnectivity
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
+class WatchConnectivityController: WKInterfaceController, WCSessionDelegate {
     var session: WCSession?
 
     override func awake(withContext context: Any?) {
@@ -29,7 +22,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     func sendDataToPhone() {
         if let session = session, session.isReachable {
-            // Simulate data or fetch it using HealthKit on the Watch
             let heartRate = 75.0  // Example value
             let temperature = 36.5  // Example value
 
@@ -49,3 +41,4 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         // Handle receiving messages from iPhone if necessary
     }
 }
+

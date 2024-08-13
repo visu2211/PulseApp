@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct HealthHomeKitMediatorWatchApp_Watch_AppApp: App {
+struct HealthHomeKitMediatorWatchAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
