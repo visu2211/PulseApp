@@ -1,9 +1,14 @@
 import SwiftUI
+import WatchConnectivity
 
-struct ContentView: View {
+struct ContentView: View, WCSessionDelegate {
     @State private var temperature: Double?
+    @State private var heartRate: Double?
     @State private var errorMessage: String?
     let healthKitManager = HealthKitManager()
+    var session: WCSession?
+
+
 
     var body: some View {
         VStack {
@@ -13,50 +18,89 @@ struct ContentView: View {
             if let temperature = temperature {
                 Text("Body Temperature: \(temperature, specifier: "%.2f")°C")
                     .padding()
-            } else if let errorMessage = errorMessage {
+
+            }
+            if let heartRate = heartRate {
+                Text("Heart Rate: \(heartRate, specifier: "%.2f") BPM")
+                    .padding()
+            }
+            if let errorMessage = errorMessage {
+
                 Text(errorMessage)
                     .padding()
                     .foregroundColor(.red)
             } else {
-                Text("Fetching temperature...")
+
+                Text("Fetching health data...")
                     .padding()
             }
-            Button(action: fetchTemperature) {
+            Button(action: fetchHealthData) {
                 Text("Refresh")
                     .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
             }
         }
-        .onAppear(perform: requestAuthorization)
+        .onAppear {
+            fetchHealthData()
+            setupWatchConnectivity()
+        }
     }
 
-    func requestAuthorization() {
-        healthKitManager.requestAuthorization { success, error in
-            if success {
-                fetchTemperature()
+    func fetchHealthData() {
+        healthKitManager.fetchBodyTemperature { (temperature, error) in
+            if let error = error {
+                self.errorMessage = "Failed to fetch temperature: \(error.localizedDescription)"
             } else {
-                errorMessage = "HealthKit authorization failed: \(String(describing: error?.localizedDescription))"
-            }
-        }
-    }
-
-    func fetchTemperature() {
-        healthKitManager.readBodyTemperature { temperature, error in
-            if let temperature = temperature {
                 self.temperature = temperature
-                self.errorMessage = nil
+            }
+        }
+
+        healthKitManager.fetchHeartRate { (heartRate, error) in
+            if let error = error {
+                self.errorMessage = "Failed to fetch heart rate: \(error.localizedDescription)"
             } else {
-                self.temperature = nil
-                self.errorMessage = error
+                self.heartRate = heartRate
+            }
+        }
+    }
+
+    // MARK: - WatchConnectivity Setup
+    func setupWatchConnectivity() {
+        if WCSession.isSupported() {
+            session = WCSession.default
+            session?.delegate = self
+            session?.activate()
+        }
+    }
+
+    // MARK: - WCSessionDelegate Methods
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        // Handle session activation
+    }
+
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        // Handle session inactivity
+    }
+
+    func sessionDidDeactivate(_ session: WCSession) {
+        // Handle session deactivation
+        session.activate()
+    }
+
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        // Handle receiving data from Watch
+        if let watchHeartRate = message["heartRate"] as? Double {
+            DispatchQueue.main.async {
+                self.heartRate = watchHeartRate
+            }
+        }
+
+        if let watchTemperature = message["temperature"] as? Double {
+            DispatchQueue.main.async {
+                self.temperature = watchTemperature
+
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+

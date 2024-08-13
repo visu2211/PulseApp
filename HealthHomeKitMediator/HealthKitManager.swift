@@ -1,39 +1,52 @@
-import Foundation //framework for collection 
+
+import Foundation
+
 import HealthKit
 
 class HealthKitManager {
     let healthStore = HKHealthStore()
-    
-    //completion handler as a paramter --> boolean value return
+    // Request authorization to access HealthKit data
+
     func requestAuthorization(completion: @escaping (Bool, Error?) -> Void) {
         guard HKHealthStore.isHealthDataAvailable() else {
             completion(false, nil)
             return
         }
-
-        let bodyTemperatureType = HKQuantityType.quantityType(forIdentifier: .bodyTemperature)!
-        let healthDataToRead: Set = [bodyTemperatureType]
+        let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate)!
+        let bodyTemperatureType = HKObjectType.quantityType(forIdentifier: .bodyTemperature)!
+        let healthDataToRead: Set = [heartRateType, bodyTemperatureType]
 
         healthStore.requestAuthorization(toShare: nil, read: healthDataToRead) { (success, error) in
             completion(success, error)
         }
     }
-    
-    //retrieving the data
-    func readBodyTemperature(completion: @escaping (Double?, String?) -> Void) {
-        let bodyTemperatureType = HKQuantityType.quantityType(forIdentifier: .bodyTemperature)!
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        let query = HKSampleQuery(sampleType: bodyTemperatureType, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { (query, results, error) in
-            if let error = error {
-                completion(nil, error.localizedDescription)
-                return
+
+    // Fetch heart rate data
+    func fetchHeartRate(completion: @escaping (Double?, Error?) -> Void) {
+        let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
+        let query = HKSampleQuery(sampleType: heartRateType, predicate: nil, limit: 1, sortDescriptors: nil) { (_, results, error) in
+            if let result = results?.first as? HKQuantitySample {
+                let heartRate = result.quantity.doubleValue(for: HKUnit(from: "count/min"))
+                completion(heartRate, nil)
+            } else {
+                completion(nil, error)
             }
-            
+        }
+        healthStore.execute(query)
+    }
+
+    // Fetch body temperature data
+    func fetchBodyTemperature(completion: @escaping (Double?, Error?) -> Void) {
+        let bodyTemperatureType = HKQuantityType.quantityType(forIdentifier: .bodyTemperature)!
+        let query = HKSampleQuery(sampleType: bodyTemperatureType, predicate: nil, limit: 1, sortDescriptors: nil) { (_, results, error) in
+
             if let result = results?.first as? HKQuantitySample {
                 let temperature = result.quantity.doubleValue(for: HKUnit.degreeCelsius())
                 completion(temperature, nil)
             } else {
-                completion(nil, "No body temperature data available.")
+
+                completion(nil, error)
+
             }
         }
         healthStore.execute(query)
