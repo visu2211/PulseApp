@@ -11,10 +11,11 @@ class HomeKitManager: NSObject, HMHomeManagerDelegate {
     }
 
     func homeManagerDidUpdateHomes(_ manager: HMHomeManager) {
-        guard let home = manager.primaryHome else {
+        guard let home = manager.homes.first else {
             print("No primary home found.")
             return
         }
+    
         
         // Accessing rooms in the home
         for room in home.rooms {

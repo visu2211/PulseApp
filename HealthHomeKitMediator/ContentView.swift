@@ -97,8 +97,11 @@ struct ContentView: View {
                 if let watchHeartRate = message["heartRate"] as? Double {
                     self.heartRate = watchHeartRate
                 }
+                else {
+                    print("There is an error")
+                }
                 if let watchTemperature = message["temperature"] as? Double {
-                    self.temperature = watchTemperature
+                    self.temperature = 75
                 }
             }
         }

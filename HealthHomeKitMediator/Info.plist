@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>NSHomeKitUsageDescription</key>
-	<string>This app requires access to devices in your home app</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.mycompany.myhealthapp</string>
-	<key>CFBundleDisplayName</key>
-	<string>MyHealthApp</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>This app requires access to your health data to track your body temperature.</string>
-</dict>
+<dict/>
 </plist>
