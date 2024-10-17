@@ -37,4 +37,9 @@ class HomeKitManager: NSObject, HMHomeManagerDelegate {
             }
         }
     }
+    
+    func setupHomeKit() {
+        homeManager = HMHomeManager()
+        homeManager?.delegate = self
+    }
 }

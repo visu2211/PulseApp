@@ -39,6 +39,7 @@ struct ContentView: View {
     @State private var heartRate: Double?
     @State private var errorMessage: String?
     let healthKitManager = HealthKitManager()
+    let homeKitManager = HomeKitManager()
 
     var body: some View {
         VStack {
@@ -67,7 +68,14 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            fetchHealthData()
+            healthKitManager.requestAuthorization { (success, error) in
+                if success {
+                    fetchHealthData()
+                } else {
+                    self.errorMessage = "Failed to authorize HealthKit: \(error?.localizedDescription ?? "Unknown error")"
+                }
+            }
+            homeKitManager.setupHomeKit()
             WatchConnectivityManager.shared // Initialize the manager
             setupNotificationObserver()
         }
